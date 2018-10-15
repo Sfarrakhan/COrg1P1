@@ -1,0 +1,5 @@
+.data
+L1:	.word 0x
+.text
+.globl main:
+main:
