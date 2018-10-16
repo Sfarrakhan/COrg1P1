@@ -1,5 +1,12 @@
-.data
-L1:	.word 0x
-.text
-.globl main:
+	.data
+	AtSymbol: .byte '@'
+	.text
+
 main:
+	li $v0, 4
+	la $a0, AtSymbol
+	
+	syscall
+	
+	li $v0, 10
+	syscall
