@@ -1,5 +1,6 @@
 	.data
 	AtSymbol: .byte '@'
+	ID: .word 02772347
 	.text
 
 main:
@@ -8,5 +9,11 @@ main:
 	
 	syscall
 	
+	li $v0, 5
+	syscall
+	li $v0, 1
+	lw $a0,	ID
+	syscall 
+
 	li $v0, 10
 	syscall
