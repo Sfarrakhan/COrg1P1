@@ -50,6 +50,12 @@ main:
 	li $a0, 'a' 
 	li $v0, 11
 	syscall
+	li $a0, 'k' 
+	li $v0, 11
+	syscall
+	li $a0, 'h' 
+	li $v0, 11
+	syscall
 	li $a0, 32
 	li $v0, 11    # space
 	syscall
