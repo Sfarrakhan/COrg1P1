@@ -1,5 +1,7 @@
 	.data
 	newline: .asciiz "\n"
+	lname: .asciiz "Farrakhan,"
+	fname: .asciiz "Syeed"
 	.text
 
 main:
@@ -29,6 +31,15 @@ main:
 	syscall
 	li $v0, 1
 	li $a0, 7 #7 
+	syscall
+	li $v0, 4      
+	la $a0, newline # new line
+	syscall
+	li $v0, 4
+	la $a0, lname # last name
+	syscall
+	li $a0, 32
+	li $v0, 11    # space
 	syscall
 
 
