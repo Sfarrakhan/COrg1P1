@@ -35,5 +35,13 @@ main:
 	syscall
 	sub $a0, $a0, 17
 	syscall
+	addi $a0, $a0, 10
+	syscall
+	sub $a0, $a0, 3
+	syscall
+	sub $a0, $a0, 7
+	syscall
+	addi $a0, $a0,13
+	syscall
 	li $v0, 10 # end function 
 	syscall
