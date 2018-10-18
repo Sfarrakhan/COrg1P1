@@ -1,88 +1,13 @@
 	.data
-	newline: .asciiz "\n"
-	lname: .asciiz "Farrakhan,"
-	fname: .asciiz "Syeed"
 	.text
 
 main:
-	li $a0, '@' #@ symbol
-	li $v0, 11
+	li $v0, 11 #@ symbol
+	li $a0, 64
 	syscall
-	li $v0, 1
-	li $a0, 0  #0
+	sub $v0, $v0, 10
+	li $a0, 0
 	syscall
-	li $v0, 1
-	li $a0, 2  #2
-	syscall
-	li $v0, 1
-	li $a0, 7  #7
-	syscall
-	li $v0, 1
-	li $a0, 7 #7
-	syscall
-	li $v0, 1
-	li $a0, 2 #2
-	syscall
-	li $v0, 1
-	li $a0, 3  #3
-	syscall
-	li $v0, 1
-	li $a0, 4 #4 
-	syscall
-	li $v0, 1
-	li $a0, 7 #7 
-	syscall
-	li $v0, 4      
-	la $a0, newline # new line
-	syscall
-	li $a0, 'F' 
-	li $v0, 11
-	syscall
-	li $a0, 'a' 
-	li $v0, 11
-	syscall
-	li $a0, 'r' 
-	li $v0, 11
-	syscall
-	li $a0, 'r' 
-	li $v0, 11
-	syscall
-	li $a0, 'a' 
-	li $v0, 11
-	syscall
-	li $a0, 'k' 
-	li $v0, 11
-	syscall
-	li $a0, 'h' 
-	li $v0, 11
-	syscall
-	li $a0, 'a' 
-	li $v0, 11
-	syscall
-	li $a0, 'n' 
-	li $v0, 11
-	syscall
-	li $a0, ',' 
-	li $v0, 11
-	syscall
-	li $a0, 32
-	li $v0, 11    # space
-	syscall
-	li $a0, 'S'  	# S
-	li $v0, 11
-	syscall
-	li $a0, 'y'   # y
-	li $v0, 11
-	syscall
-	li $a0, 'e' #e 
-	li $v0, 11
-	syscall
-	li $a0, 'e' #e
-	li $v0, 11
-	syscall
-	li $a0, 'd' #d 
-	li $v0, 11
-	syscall
-
+	addi $a0, $a0,2
 	li $v0, 10 # end function 
 	syscall
